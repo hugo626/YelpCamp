@@ -4,7 +4,8 @@
   "description": "This is my first web development project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Yuguo LI",
   "license": "ISC",
