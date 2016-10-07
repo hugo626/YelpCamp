@@ -1,0 +1,13 @@
+<% include ../partials/header%>
+    <div class="containe">
+        <h1>Add new comments to <%=foundCampground.name%></h1>
+        <form action="/campgrounds/<%=foundCampground._id%>/comments/" method="POST">
+            
+            <textarea class="form-control" rows="4" cols="50" name="comment[body]" placeholder="Comments of this campground..."></textarea>
+            <div><strong><%=currentUser.username%></strong> - Registered on <%=currentUser.registered_at.toDateString()%></div>
+            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+        </form>
+        
+        <a href="/campgrounds">Back to Campgrounds List</a>
+    </div>
+<% include ../partials/footer%>

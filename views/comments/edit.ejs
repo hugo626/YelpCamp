@@ -1,0 +1,13 @@
+<% include ../partials/header%>
+    <div class="containe">
+        <h1>Edit Comment</h1>
+        <form action="/campgrounds/<%=campground_id%>/comments/<%=foundComment._id%>?_method=PUT" method="POST">
+            
+            <textarea class="form-control" rows="4" cols="50" name="comment[body]" placeholder="Comments of this campground..."><%=foundComment.body%></textarea>
+            <div><strong><%=currentUser.username%></strong> - Registered on <%=currentUser.registered_at.toDateString()%></div>
+            <button class="btn btn-lg btn-warning btn-block">Update!</button>
+        </form>
+        
+        <a href="javascript:history.back()">Go Back</a>
+    </div>
+<% include ../partials/footer%>

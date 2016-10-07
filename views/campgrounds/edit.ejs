@@ -1,0 +1,14 @@
+<% include ../partials/header%>
+    <div class="containe">
+        <h1>Edit campground</h1>
+        <form action="/campgrounds/<%=foundCampground._id%>?_method=PUT" method="POST">
+            
+            <input class="form-control" type = "text" name="campground[name]" placeholder="campground name" value="<%=foundCampground.name%>"/>
+            <input class="form-control" type = "text" name="campground[image]" placeholder="image url"  value="<%=foundCampground.image%>"/>
+            <input class="form-control" type = "text" name="campground[description]" placeholder="description of this campground" value = "<%=foundCampground.description%>"/>
+            <button class="btn btn-lg btn-warning btn-block">Update!</button>
+        </form>
+        
+        <a href="javascript:history.back()">Go Back</a>
+    </div>
+<% include ../partials/footer%>
