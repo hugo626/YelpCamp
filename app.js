@@ -17,7 +17,7 @@ var indexRoutes         = require("./routes/index"),
 // mongoose.connect("mongodb://localhost/yelp_camp");
 // mongoose.connect("mongodb://yelpcamp_admin:admin@ds053146.mlab.com:53146/yelpcamp_db");
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
-console.log(url);
+console.log("mongodb url: "+url);
 mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
